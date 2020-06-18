@@ -9,7 +9,7 @@ Once you have installed either [Greasemonkey](https://www.greasespot.net/), [Vio
 ## Features
 Currently two zoom features:
 * **Max the image size** to the size of the web page window by pressing **right mouse button and left mouse button on an image** (one after the other), pressing right mouse button and left mouse button again restores the original size of the image in the web page.
-* **Incrementally zoom or unzoom an image** by pressing **left mouse button and then moving the mouse wheel up or down**, pressing right mouse button and left mouse button after an incremental zoom restore the original size of the image in the web page.
+* **Incrementally zoom or unzoom an image** by pressing **left mouse button and then moving the mouse wheel up or down**, pressing right mouse button and left mouse button after an incremental zoom restores the original size of the image in the web page.
 
 ## Tweaking the script
 Four settings might be tweaked in the script (you may edit the script from your user-script manager extension):
