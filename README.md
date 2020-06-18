@@ -6,14 +6,14 @@ This is a [user-script](https://en.wikipedia.org/wiki/Userscript) for your web b
 This script allows you to easily zoom an image in a web page with your mouse buttons and wheel.
 
 ## Installation
-Once you have installed either [Greasemonkey](https://www.greasespot.net/), [Violentmonkey](https://violentmonkey.github.io/) or [Tampermonkey](https://www.tampermonkey.net/) for your web browser, you just click on [the raw link to this script](https://raw.githubusercontent.com/roger21/image-zoom/master/image_zoom.user.js) to install it and your user-script manager extension will ask you to confirm the installation.
+Once you have installed either [Greasemonkey](https://www.greasespot.net/), [Violentmonkey](https://violentmonkey.github.io/) or [Tampermonkey](https://www.tampermonkey.net/) for your web browser, you just click on [the link to the raw version of this script](https://raw.githubusercontent.com/roger21/image-zoom/master/image_zoom.user.js) to install it and your user-script manager extension will ask you to confirm the installation.
 
 ## Features
 This script currently has two zoom features:
 * **Max the image size** to the size of the web page window by pressing **right mouse button and left mouse button on an image** (one after the other), pressing right mouse button and left mouse button again restores the original size of the image in the web page.
 * **Incrementally zoom or unzoom an image** by pressing and holding **right mouse button on an image and then moving the mouse wheel up or down** to unzoom or zoom the image, pressing right mouse button and left mouse button after an incremental zoom restores the original size of the image in the web page.
 
-You might try the script on the following test image:
+The following image is there so you can test the script on it:
 
 ![test image](https://avatars0.githubusercontent.com/u/892186?s=460&v=4)
 
