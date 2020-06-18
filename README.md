@@ -4,7 +4,7 @@ Basic image zoom functionality as a user-script for your web browser.
 This is a [user-script](https://en.wikipedia.org/wiki/Userscript) for your web browser, you need either [Greasemonkey](https://www.greasespot.net/), [Violentmonkey](https://violentmonkey.github.io/) or [Tampermonkey](https://www.tampermonkey.net/) to install and use it, the later two might be prefered since [Greasemonkey v4+ does not suppoort frames yet](https://github.com/greasemonkey/greasemonkey/issues/2574).
 
 ## Installation
-Once you have installed either [Greasemonkey](https://www.greasespot.net/), [Violentmonkey](https://violentmonkey.github.io/) or [Tampermonkey](https://www.tampermonkey.net/) for your web browser, you just click on the raw link to this script to install it and your user-script manager extension will ask you to confirm the installation.
+Once you have installed either [Greasemonkey](https://www.greasespot.net/), [Violentmonkey](https://violentmonkey.github.io/) or [Tampermonkey](https://www.tampermonkey.net/) for your web browser, you just click on [the raw link to this script](https://raw.githubusercontent.com/roger21/image-zoom/master/image_zoom.user.js) to install it and your user-script manager extension will ask you to confirm the installation.
 
 ## Features
 Curently two zoom features:
