@@ -13,6 +13,8 @@ This script currently has two zoom features:
 * **Max the image size** to the size of the web page window by pressing **right mouse button and left mouse button on an image** (one after the other), pressing right mouse button and left mouse button again restores the original size of the image in the web page.
 * **Incrementally zoom or unzoom an image** by pressing and holding **left mouse button on an image and then moving the mouse wheel up or down** to unzoom or zoom the image, pressing right mouse button and left mouse button after an incremental zoom restores the original size of the image in the web page.
 
+![I AM A TEST IMAGE, YOU CAN TRY THIS SCRIPT ON ME](https://avatars0.githubusercontent.com/u/892186?s=460&v=4)
+
 ## Tweaking the script
 Four settings might be tweaked in the script (you may edit the script from your user-script manager extension):
 * The **`zoom_factor`**, a double that must be more than `1` and that specifies the amount of zoom or unzoom at each wheel input for the incremental zoom feature (default to `1.25` a.k.a 125%).
