@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name          image zoom
-// @version       0.1.0
+// @version       0.1.1
 // @namespace     roger21.free.fr
 // @description   Basic image zoom functionality as a user-script for your web browser.
 // @icon          data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAQAAAABbAUdZAAAALElEQVR42mP4DwQMaMQHg8P8EOLz%2F%2F%2FnIcR%2FOPEZpARGUEH2w2EefgiBxS0ARNpzyS9f0t0AAAAASUVORK5CYII%3D
@@ -16,7 +16,7 @@
 
 /*
 
-Copyright © 2020 roger21@free.fr
+Copyright © 2020-2021 roger21@free.fr
 
 This program is free software: you can redistribute it and/or modify it under the
 terms of the GNU Affero General Public License as published by the Free Software
@@ -31,9 +31,11 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.txt>.
 
 */
 
-// $Rev: 2190 $
+// $Rev: 2812 $
 
 // historique :
+// 0.1.1 (28/01/2021) :
+// - updated page height detection for ff 85
 // 0.1.0 (18/06/2020) :
 // - seems good enougth for publication
 
@@ -115,7 +117,10 @@ function image_zoom_down(p_event) {
       this.dataset.imagezoom = "true";
       let ratio = width / height;
       let window_width = document.documentElement.clientWidth;
-      let window_height = document.documentElement.clientHeight || window.innerHeight;
+      let window_height = window.innerHeight;
+      if(document.documentElement.clientHeight && document.documentElement.clientHeight !== 16) {
+        window_height = document.documentElement.clientHeight;
+      }
       let window_ratio = window_width / window_height;
       if(window_ratio < ratio) {
         this.width = window_width;
@@ -140,7 +145,10 @@ function image_zoom_wheel(p_event) {
     let width = this.width;
     let height = this.height;
     let window_width = document.documentElement.clientWidth;
-    let window_height = document.documentElement.clientHeight || window.innerHeight;
+    let window_height = window.innerHeight;
+    if(document.documentElement.clientHeight && document.documentElement.clientHeight !== 16) {
+      window_height = document.documentElement.clientHeight;
+    }
     let window_scroll_x = window.scrollX;
     let window_scroll_y = window.scrollY;
     let offset = get_offset(this);
