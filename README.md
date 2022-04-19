@@ -8,6 +8,9 @@ This script allows you to easily zoom an image in a web page with your mouse but
 ## Installation
 Once you have installed either [Greasemonkey](https://www.greasespot.net/), [Violentmonkey](https://violentmonkey.github.io/) or [Tampermonkey](https://www.tampermonkey.net/) for your web browser, you just click on [the link to the raw version of this script](https://raw.githubusercontent.com/roger21/image-zoom/master/image_zoom.user.js) to install it and your user-script manager extension will ask you to confirm the installation.
 
+### Important note for Firefox users on Linux
+On Linux, the context menu is triggered on mousedown (instead of mouseup on Windows), this makes the script to not work properly. To fix that you need to switch the about:config option `ui.context_menus.after_mouseup` to `true`.
+
 ## Features
 This script currently has two zoom features:
 * **Max the image size** to the size of the web page window by pressing **right mouse button and left mouse button on an image** (one after the other), pressing right mouse button and left mouse button again restores the original size of the image in the web page.
