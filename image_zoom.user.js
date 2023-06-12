@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name          image zoom
-// @version       0.1.1
+// @version       0.1.2
 // @namespace     roger21.free.fr
 // @description   Basic image zoom functionality as a user-script for your web browser.
 // @icon          data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAQAAAABbAUdZAAAALElEQVR42mP4DwQMaMQHg8P8EOLz%2F%2F%2FnIcR%2FOPEZpARGUEH2w2EefgiBxS0ARNpzyS9f0t0AAAAASUVORK5CYII%3D
@@ -16,7 +16,7 @@
 
 /*
 
-Copyright © 2020-2021 roger21@free.fr
+Copyright © 2020-2021, 2023 roger21@free.fr
 
 This program is free software: you can redistribute it and/or modify it under the
 terms of the GNU Affero General Public License as published by the Free Software
@@ -34,6 +34,8 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.txt>.
 // $Rev: 2812 $
 
 // historique :
+// 0.1.2 (12/06/2023) :
+// - added a mutation observer to catch dynamic images
 // 0.1.1 (28/01/2021) :
 // - updated page height detection for ff 85
 // 0.1.0 (18/06/2020) :
@@ -44,12 +46,25 @@ var zoom_direction = "down";
 var zoom_follows_cursor_x = true;
 var zoom_follows_cursor_y = true;
 
-var images = document.querySelectorAll("img");
+let image_observer = new MutationObserver(image_add_events);
 
-for(let l_image of images) {
-  l_image.addEventListener("mousedown", image_zoom_down, true);
-  l_image.addEventListener("wheel", image_zoom_wheel, true);
+image_observer.observe(document, {
+  attributes: false,
+  childList: true,
+  characterData: false,
+  subtree: true,
+});
+
+function image_add_events() {
+  var images = document.querySelectorAll("img:not([image_zoom_events_added])");
+  for(let l_image of images) {
+    l_image.addEventListener("mousedown", image_zoom_down, true);
+    l_image.addEventListener("wheel", image_zoom_wheel, true);
+    l_image.setAttribute("image_zoom_events_added", "image_zoom_events_added");
+  }
 }
+
+image_add_events();
 
 function get_offset(p_element) {
   let _x = 0;
