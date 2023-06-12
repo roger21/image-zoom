@@ -1,4 +1,4 @@
-# image zoom 0.1.1
+# image zoom 0.1.2
 Basic image zoom functionality as a user-script for your web browser.
 
 This is a [user-script](https://en.wikipedia.org/wiki/Userscript) for your web browser, you need either [Greasemonkey](https://www.greasespot.net/), [Violentmonkey](https://violentmonkey.github.io/) or [Tampermonkey](https://www.tampermonkey.net/) to install and use it, the later two might be preferred since [Greasemonkey v4+ does not support frames yet](https://github.com/greasemonkey/greasemonkey/issues/2574).
