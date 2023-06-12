@@ -31,8 +31,6 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.txt>.
 
 */
 
-// $Rev: 2812 $
-
 // historique :
 // 0.1.2 (12/06/2023) :
 // - added a mutation observer to catch dynamic images
